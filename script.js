@@ -152,16 +152,3 @@ document.querySelectorAll('.shorts-track iframe').forEach((iframe) => {
 
 // If you want infinite scroll effect, or auto-scroll, lemme know!
 // For now, this is the clean separate setup you asked for.
-<script>
-  const iframe = document.querySelector('iframe');
-  const observer = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting) {
-      const src = iframe.getAttribute('data-src');
-      iframe.setAttribute('src', src);
-      observer.disconnect();
-    }
-  }, { threshold: 0.5 });
-
-  observer.observe(iframe);
-</script>
-
